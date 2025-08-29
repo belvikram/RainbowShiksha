@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Heart } from 'lucide-react';
+import { Heart, Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Story', href: '/story' },
-    { name: 'Events', href: '/events' },
-    { name: 'Impact', href: '/impact' },
-    { name: 'Get Involved', href: '/get-involved' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Our Story", href: "/story" },
+    { name: "Events", href: "/events" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Impact", href: "/impact" },
+    { name: "Get Involved", href: "/get-involved" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -25,7 +26,9 @@ const Header: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-blue-500 via-green-500 to-yellow-500 rounded-lg flex items-center justify-center">
               <Heart className="h-6 w-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-gray-900">Rainbow Shiksha</span>
+            <span className="text-2xl font-bold text-gray-900">
+              Rainbow Shiksha
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -36,8 +39,8 @@ const Header: React.FC = () => {
                 to={item.href}
                 className={`text-sm font-medium transition-colors ${
                   location.pathname === item.href
-                    ? 'text-blue-600 border-b-2 border-blue-600'
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? "text-blue-600 border-b-2 border-blue-600"
+                    : "text-gray-700 hover:text-blue-600"
                 } py-2`}
               >
                 {item.name}
@@ -57,7 +60,11 @@ const Header: React.FC = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-gray-900"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -73,8 +80,8 @@ const Header: React.FC = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 text-base font-medium transition-colors ${
                     location.pathname === item.href
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   } rounded-md`}
                 >
                   {item.name}

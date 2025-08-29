@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Donations from "./pages/Donations";
 import Events from "./pages/Events";
 import Footer from "./components/Footer";
+import Gallery from "./pages/Gallery";
 import GetInvolved from "./pages/GetInvolved";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -26,6 +27,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/impact" element={<Impact />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
         <Footer />

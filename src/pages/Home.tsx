@@ -1,51 +1,68 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, BookOpen, Award, Heart, Calendar, ArrowRight, Play } from 'lucide-react';
+import {
+  ArrowRight,
+  Award,
+  BookOpen,
+  Calendar,
+  Heart,
+  Play,
+  Users,
+} from "lucide-react";
+
+import { Link } from "react-router-dom";
+import React from "react";
 
 const Home: React.FC = () => {
   const stats = [
-    { number: '500+', label: 'Children Supported', icon: Users },
-    { number: '50+', label: 'Schools Partnered', icon: BookOpen },
-    { number: '₹12L+', label: 'Funds Raised', icon: Heart },
-    { number: '25+', label: 'Awards & Recognition', icon: Award },
+    { number: "500+", label: "Children Supported", icon: Users },
+    { number: "50+", label: "Schools Partnered", icon: BookOpen },
+    { number: "₹12L+", label: "Funds Raised", icon: Heart },
+    { number: "25+", label: "Awards & Recognition", icon: Award },
   ];
 
   const impactStories = [
     {
-      name: 'Priya Sharma',
+      name: "Priya Sharma",
       age: 12,
-      story: 'From struggling with basic reading to becoming top of her class, Priya\'s journey shows the power of education.',
-      image: 'https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400',
-      impact: 'Now reads 50+ books per year'
+      story:
+        "From struggling with basic reading to becoming top of her class, Priya's journey shows the power of education.",
+      image:
+        "https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400",
+      impact: "Now reads 50+ books per year",
     },
     {
-      name: 'Arjun Kumar',
+      name: "Arjun Kumar",
       age: 14,
-      story: 'With access to science equipment, Arjun discovered his passion for physics and dreams of becoming an engineer.',
-      image: 'https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=400',
-      impact: 'Scored 95% in science'
+      story:
+        "With access to science equipment, Arjun discovered his passion for physics and dreams of becoming an engineer.",
+      image:
+        "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=400",
+      impact: "Scored 95% in science",
     },
     {
-      name: 'Meera Patel',
+      name: "Meera Patel",
       age: 13,
-      story: 'Thanks to digital literacy programs, Meera now helps her family manage their small business online.',
-      image: 'https://images.pexels.com/photos/8923015/pexels-photo-8923015.jpeg?auto=compress&cs=tinysrgb&w=400',
-      impact: 'Increased family income by 30%'
+      story:
+        "Thanks to digital literacy programs, Meera now helps her family manage their small business online.",
+      image:
+        "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=400",
+      impact: "Increased family income by 30%",
     },
   ];
 
   const upcomingEvents = [
     {
-      title: 'Annual Fundraising Gala',
-      date: 'March 15, 2024',
-      location: 'Mumbai Convention Center',
-      description: 'Join us for an evening of celebration and fundraising for education.',
+      title: "Annual Fundraising Gala",
+      date: "March 15, 2024",
+      location: "Mumbai Convention Center",
+      description:
+        "Join us for an evening of celebration and fundraising for education.",
     },
     {
-      title: 'School Supply Drive',
-      date: 'April 2, 2024',
-      location: 'Various Locations',
-      description: 'Help us collect books, stationery, and educational materials.',
+      title: "School Supply Drive",
+      date: "April 2, 2024",
+      location: "Various Locations",
+      description:
+        "Help us collect books, stationery, and educational materials.",
     },
   ];
 
@@ -58,10 +75,15 @@ const Home: React.FC = () => {
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Empowering Children Through
-                <span className="bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 bg-clip-text text-transparent"> Education</span>
+                <span className="bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 bg-clip-text text-transparent">
+                  {" "}
+                  Education
+                </span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Every child deserves access to quality education. Join Rainbow Shiksha in creating a brighter future for India's children, one classroom at a time.
+                Every child deserves access to quality education. Join Rainbow
+                Shiksha in creating a brighter future for India's children, one
+                classroom at a time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -105,8 +127,12 @@ const Home: React.FC = () => {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Impact in Numbers</h2>
-            <p className="text-xl text-gray-600">Transforming lives through education across India</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Impact in Numbers
+            </h2>
+            <p className="text-xl text-gray-600">
+              Transforming lives through education across India
+            </p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
@@ -116,7 +142,9 @@ const Home: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
                     <Icon className="h-8 w-8 text-blue-600" />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                  <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                    {stat.number}
+                  </div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </div>
               );
@@ -129,22 +157,33 @@ const Home: React.FC = () => {
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Stories of Transformation</h2>
-            <p className="text-xl text-gray-600">Meet the children whose lives have been changed through education</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Stories of Transformation
+            </h2>
+            <p className="text-xl text-gray-600">
+              Meet the children whose lives have been changed through education
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {impactStories.map((story, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
                 <img
                   src={story.image}
                   alt={story.name}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{story.name}, {story.age}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {story.name}, {story.age}
+                  </h3>
                   <p className="text-gray-600 mb-4">{story.story}</p>
                   <div className="bg-blue-50 p-3 rounded-lg">
-                    <p className="text-blue-800 font-medium text-sm">{story.impact}</p>
+                    <p className="text-blue-800 font-medium text-sm">
+                      {story.impact}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -166,18 +205,27 @@ const Home: React.FC = () => {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-            <p className="text-xl text-gray-600">Join us in our mission to transform education</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Upcoming Events
+            </h2>
+            <p className="text-xl text-gray-600">
+              Join us in our mission to transform education
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {upcomingEvents.map((event, index) => (
-              <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div
+                key={index}
+                className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+              >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Calendar className="h-6 w-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{event.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {event.title}
+                    </h3>
                     <div className="text-gray-600 space-y-1 mb-4">
                       <div className="text-sm">{event.date}</div>
                       <div className="text-sm">{event.location}</div>
@@ -210,7 +258,8 @@ const Home: React.FC = () => {
             Every Child Deserves a Bright Future
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Your contribution can transform a child's life forever. Join our mission to make education accessible to every child in India.
+            Your contribution can transform a child's life forever. Join our
+            mission to make education accessible to every child in India.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
