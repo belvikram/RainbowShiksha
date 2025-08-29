@@ -21,30 +21,27 @@ const Home: React.FC = () => {
 
   const impactStories = [
     {
-      name: "Priya Sharma",
-      age: 12,
+      name: "Arjun Prasad",
+      age: 18,
       story:
-        "From struggling with basic reading to becoming top of her class, Priya's journey shows the power of education.",
-      image:
-        "https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "From struggling with basic reading to becoming top of her class, Arjun's journey shows the power of education.",
+      image: "src/assets/uploads/2024/03/photos-2024-0314.jpeg",
       impact: "Now reads 50+ books per year",
     },
     {
-      name: "Arjun Kumar",
+      name: "Arjun Prasad",
       age: 14,
       story:
         "With access to science equipment, Arjun discovered his passion for physics and dreams of becoming an engineer.",
-      image:
-        "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "src/assets/uploads/2024/03/photos-2024-0314.jpeg",
       impact: "Scored 95% in science",
     },
     {
-      name: "Meera Patel",
+      name: "Arjun Prasad",
       age: 13,
       story:
         "Thanks to digital literacy programs, Meera now helps her family manage their small business online.",
-      image:
-        "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "src/assets/uploads/2024/03/photos-2024-0314.jpeg",
       impact: "Increased family income by 30%",
     },
   ];
@@ -103,7 +100,7 @@ const Home: React.FC = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/8923166/pexels-photo-8923166.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="src/assets/uploads/2022/09/photos-2022-095.jpg"
                 alt="Happy children in classroom"
                 className="rounded-2xl shadow-2xl"
               />
