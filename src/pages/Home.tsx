@@ -101,7 +101,7 @@ const Home: React.FC = () => {
             </div>
             <div className="relative">
               <img
-                src="src/assets/uploads/2022/09/photos-2022-095.jpg"
+                src={storyImage}
                 alt="Happy children in classroom"
                 className="rounded-2xl shadow-2xl"
               />
