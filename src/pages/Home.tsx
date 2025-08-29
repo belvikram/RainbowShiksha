@@ -10,6 +10,7 @@ import {
 
 import { Link } from "react-router-dom";
 import React from "react";
+import storyImage from "/src/assets/uploads/2022/09/photos-2022-095.jpg";
 
 const Home: React.FC = () => {
   const stats = [
@@ -25,7 +26,7 @@ const Home: React.FC = () => {
       age: 18,
       story:
         "From struggling with basic reading to becoming top of her class, Arjun's journey shows the power of education.",
-      image: "src/assets/uploads/2024/03/photos-2024-0314.jpeg",
+      image: storyImage,
       impact: "Now reads 50+ books per year",
     },
     {
@@ -33,7 +34,7 @@ const Home: React.FC = () => {
       age: 14,
       story:
         "With access to science equipment, Arjun discovered his passion for physics and dreams of becoming an engineer.",
-      image: "src/assets/uploads/2024/03/photos-2024-0314.jpeg",
+      image: storyImage,
       impact: "Scored 95% in science",
     },
     {
@@ -41,7 +42,7 @@ const Home: React.FC = () => {
       age: 13,
       story:
         "Thanks to digital literacy programs, Meera now helps her family manage their small business online.",
-      image: "src/assets/uploads/2024/03/photos-2024-0314.jpeg",
+      image: storyImage,
       impact: "Increased family income by 30%",
     },
   ];
