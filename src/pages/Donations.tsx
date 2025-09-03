@@ -298,10 +298,17 @@ export default function DonationsWithQR() {
                 ₹{currentAmount.toLocaleString()}
               </div>
               <div className="mt-1 text-gray-700">one-time donation</div>
-              <div className="mt-4 text-sm text-gray-600">
-                This will help {Math.floor(currentAmount / 500)} children with
-                school supplies for one month.
-              </div>
+              {customAmount ? (
+                <div className="mt-4 text-sm text-gray-600">
+                  Even a small donation makes a big impact. Thank you for
+                  contributing!
+                </div>
+              ) : (
+                <div className="mt-4 text-sm text-gray-600">
+                  This will help {Math.floor(currentAmount / 500)} children with
+                  school supplies for one month.
+                </div>
+              )}
             </div>
 
             {/* Donation Button */}
