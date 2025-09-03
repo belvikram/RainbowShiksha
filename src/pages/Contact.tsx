@@ -1,74 +1,78 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { Clock, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import React, { useState } from "react";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    queryType: 'general',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    queryType: "general",
+    message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Handle form submission here
-    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+    alert("Thank you for your message! We'll get back to you within 24 hours.");
     setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      queryType: 'general',
-      message: ''
+      name: "",
+      email: "",
+      subject: "",
+      queryType: "general",
+      message: "",
     });
   };
 
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email Us',
-      details: 'info@rainbowshiksha.org',
-      subDetails: 'We respond within 24 hours',
-      color: 'from-blue-500 to-blue-600'
+      title: "Email Us",
+      details: "RainbowShiksha@gmail.com, RainbowYouthForSociety@gmail.com",
+      subDetails: "We respond within 24 hours",
+      color: "from-blue-500 to-blue-600",
     },
     {
       icon: Phone,
-      title: 'Call Us',
-      details: '+91 98765 43210',
-      subDetails: 'Mon-Fri, 9:00 AM - 6:00 PM',
-      color: 'from-green-500 to-green-600'
+      title: "Call Us",
+      details: "+91 9959277190",
+      subDetails: "Mon-Fri, 9:00 AM - 6:00 PM",
+      color: "from-green-500 to-green-600",
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: '123 Education Avenue, Bandra West',
-      subDetails: 'Mumbai, Maharashtra 400050',
-      color: 'from-yellow-500 to-yellow-600'
-    }
+      title: "Visit Us",
+      details: "B.R Reddy Colony, Industrial Estate, Kallur",
+      subDetails: "Kurnool (Dist), Andhra Pradesh-518003",
+      color: "from-yellow-500 to-yellow-600",
+    },
   ];
 
   const queryTypes = [
-    { value: 'general', label: 'General Inquiry' },
-    { value: 'volunteer', label: 'Volunteer Opportunities' },
-    { value: 'donation', label: 'Donation Support' },
-    { value: 'partnership', label: 'Partnership & CSR' },
-    { value: 'media', label: 'Media & Press' },
-    { value: 'support', label: 'Technical Support' }
+    { value: "general", label: "General Inquiry" },
+    { value: "volunteer", label: "Volunteer Opportunities" },
+    { value: "donation", label: "Donation Support" },
+    { value: "partnership", label: "Partnership & CSR" },
+    { value: "media", label: "Media & Press" },
+    { value: "support", label: "Technical Support" },
   ];
 
   const officeHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM' },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM' },
-    { day: 'Sunday', hours: 'Closed' }
+    { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM" },
+    { day: "Saturday", hours: "10:00 AM - 4:00 PM" },
+    { day: "Sunday", hours: "Closed" },
   ];
 
   return (
@@ -80,8 +84,8 @@ const Contact: React.FC = () => {
             Get in Touch
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            We'd love to hear from you. Whether you have questions about our programs, 
-            want to get involved, or need support, we're here to help.
+            We'd love to hear from you. Whether you have questions about our
+            programs, want to get involved, or need support, we're here to help.
           </p>
         </div>
       </section>
@@ -94,10 +98,14 @@ const Contact: React.FC = () => {
               const Icon = info.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${info.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-br ${info.color} rounded-full flex items-center justify-center mx-auto mb-4`}
+                  >
                     <Icon className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{info.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {info.title}
+                  </h3>
                   <p className="text-lg text-gray-700 mb-1">{info.details}</p>
                   <p className="text-sm text-gray-500">{info.subDetails}</p>
                 </div>
@@ -113,11 +121,16 @@ const Contact: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Send us a Message
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -132,7 +145,10 @@ const Contact: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -149,7 +165,10 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="queryType" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="queryType"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Query Type
                   </label>
                   <select
@@ -168,7 +187,10 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Subject *
                   </label>
                   <input
@@ -184,7 +206,10 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -215,7 +240,9 @@ const Contact: React.FC = () => {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-center mb-4">
                   <Clock className="h-6 w-6 text-blue-600 mr-2" />
-                  <h3 className="text-xl font-semibold text-gray-900">Office Hours</h3>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Office Hours
+                  </h3>
                 </div>
                 <div className="space-y-2">
                   {officeHours.map((schedule, index) => (
@@ -229,7 +256,9 @@ const Contact: React.FC = () => {
 
               {/* Emergency Contact */}
               <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-6 border-l-4 border-red-500">
-                <h3 className="text-lg font-semibold text-red-800 mb-2">Emergency Contact</h3>
+                <h3 className="text-lg font-semibold text-red-800 mb-2">
+                  Emergency Contact
+                </h3>
                 <p className="text-red-700 text-sm mb-2">
                   For urgent matters regarding child welfare or safety:
                 </p>
@@ -244,41 +273,73 @@ const Contact: React.FC = () => {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-center mb-4">
                   <MessageCircle className="h-6 w-6 text-green-600 mr-2" />
-                  <h3 className="text-xl font-semibold text-gray-900">Quick Answers</h3>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Quick Answers
+                  </h3>
                 </div>
                 <div className="space-y-4 text-sm">
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">How can I track my donation?</h4>
-                    <p className="text-gray-600">You'll receive a confirmation email with tracking details within 24 hours.</p>
+                    <h4 className="font-medium text-gray-900 mb-1">
+                      How can I track my donation?
+                    </h4>
+                    <p className="text-gray-600">
+                      You'll receive a confirmation email with tracking details
+                      within 24 hours.
+                    </p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Can I visit the schools you support?</h4>
-                    <p className="text-gray-600">Yes! We organize monthly school visits for donors and volunteers. Contact us to schedule.</p>
+                    <h4 className="font-medium text-gray-900 mb-1">
+                      Can I visit the schools you support?
+                    </h4>
+                    <p className="text-gray-600">
+                      Yes! We organize monthly school visits for donors and
+                      volunteers. Contact us to schedule.
+                    </p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Are donations tax-deductible?</h4>
-                    <p className="text-gray-600">Yes, all donations are eligible for 80G tax deductions under Indian Income Tax Act.</p>
+                    <h4 className="font-medium text-gray-900 mb-1">
+                      Are donations tax-deductible?
+                    </h4>
+                    <p className="text-gray-600">
+                      Yes, all donations are eligible for 80G tax deductions
+                      under Indian Income Tax Act.
+                    </p>
                   </div>
                 </div>
               </div>
 
               {/* Social Media */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Connect With Us</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Connect With Us
+                </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Follow us on social media for daily updates, success stories, and behind-the-scenes content.
+                  Follow us on social media for daily updates, success stories,
+                  and behind-the-scenes content.
                 </p>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                  >
                     f
                   </a>
-                  <a href="#" className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors"
+                  >
                     t
                   </a>
-                  <a href="#" className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors"
+                  >
                     i
                   </a>
-                  <a href="#" className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900 transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900 transition-colors"
+                  >
                     in
                   </a>
                 </div>
@@ -298,8 +359,13 @@ const Contact: React.FC = () => {
           <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
             <div className="text-center">
               <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-              <p className="text-gray-600">Interactive map would be embedded here</p>
-              <p className="text-sm text-gray-500">123 Education Avenue, Bandra West, Mumbai</p>
+              <p className="text-gray-600">
+                Interactive map would be embedded here
+              </p>
+              <p className="text-sm text-gray-500">
+                B.R Reddy Colony, Near GSNR School, Industrial Estate, Kallur
+                (M), Kurnool (Dist), Andhra Pradesh 518003
+              </p>
             </div>
           </div>
         </div>

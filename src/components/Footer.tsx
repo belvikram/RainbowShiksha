@@ -1,6 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import {
+  Facebook,
+  Heart,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+} from "lucide-react";
+
+import { Link } from "react-router-dom";
+import React from "react";
 
 const Footer: React.FC = () => {
   return (
@@ -16,20 +26,21 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold">Rainbow Shiksha</span>
             </Link>
             <p className="text-gray-300 text-sm mb-4">
-              Empowering children through education and creating a brighter future for India's next generation.
+              Empowering children through education and creating a brighter
+              future for India's next generation.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-blue-400" />
-                <span>info@rainbowshiksha.org</span>
+                <span>RainbowShiksha@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-blue-400" />
-                <span>+91 98765 43210</span>
+                <span>+91 9959277190</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2 text-blue-400" />
-                <span>Mumbai, Maharashtra, India</span>
+                <span>Kurnool, Andhra Pradesh, India</span>
               </div>
             </div>
           </div>
@@ -38,11 +49,46 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/story" className="text-gray-300 hover:text-white transition-colors">Our Story</Link></li>
-              <li><Link to="/impact" className="text-gray-300 hover:text-white transition-colors">Impact Stories</Link></li>
-              <li><Link to="/events" className="text-gray-300 hover:text-white transition-colors">Events</Link></li>
-              <li><Link to="/get-involved" className="text-gray-300 hover:text-white transition-colors">Get Involved</Link></li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/story"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Our Story
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/impact"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Impact Stories
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/events"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Events
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/get-involved"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Get Involved
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -50,29 +96,88 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/donate" className="text-gray-300 hover:text-white transition-colors">Make a Donation</Link></li>
-              <li><Link to="/get-involved" className="text-gray-300 hover:text-white transition-colors">Volunteer</Link></li>
-              <li><Link to="/get-involved" className="text-gray-300 hover:text-white transition-colors">Partner with Us</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+              <li>
+                <Link
+                  to="/donate"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Make a Donation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/get-involved"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Volunteer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/get-involved"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Partner with Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  FAQ
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Newsletter & Social */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
-            <p className="text-gray-300 text-sm mb-4">Subscribe to our newsletter for updates on our impact.</p>
+            <p className="text-gray-300 text-sm mb-4">
+              Subscribe to our newsletter for updates on our impact.
+            </p>
+            {/* 
+            
+            FB: https://www.facebook.com/RainbowShiksha?mibextid=LQQJ4d  (or) https://www.facebook.com/RainbowShiksha/
+X : https://x.com/RainbowShiksha
+Instagram: https://www.instagram.com/rainbowshiksha?igsh=bTFta2wzN3hhNHF3
+Youtube: Yet to Create one*/}
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/RainbowShiksha"
+                className="text-gray-300 hover:text-blue-400 transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a
+                target="_blank"
+                href="https://x.com/RainbowShiksha"
+                className="text-gray-300 hover:text-blue-400 transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/rainbowshiksha"
+                className="text-gray-300 hover:text-pink-400 transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-600 transition-colors">
+              <a
+                target="_blank"
+                href="#"
+                className="text-gray-300 hover:text-blue-600 transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -92,9 +197,24 @@ const Footer: React.FC = () => {
             © 2024 Rainbow Shiksha. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Terms & Conditions</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Transparency</a>
+            <a
+              href="#"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Terms & Conditions
+            </a>
+            <a
+              href="#"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              Transparency
+            </a>
           </div>
         </div>
       </div>
