@@ -79,7 +79,7 @@ const OurStory: React.FC = () => {
       description:
         "Celebrated Children’s Day in an orphanage located in Siddaganga (Tumkur).",
       icon: Calendar,
-      image: "Image8_URL",
+      image: ourJouneryImage8,
     },
     {
       year: "2021",
