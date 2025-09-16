@@ -157,7 +157,7 @@ const About: React.FC = () => {
             About Rainbow Shiksha
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Founded in 2018, Rainbow Shiksha is dedicated to making quality
+            Founded in 2013, Rainbow Shiksha is dedicated to making quality
             education accessible to every child in India. We believe that
             education is not just a right, but the foundation for breaking
             generational cycles of poverty and building a more equitable
