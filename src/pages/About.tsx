@@ -2,6 +2,21 @@ import { Award, Heart, Linkedin, Mail, Target, Users } from "lucide-react";
 
 import React from "react";
 
+// Import team photos
+import MallikarjunaPhoto from "../assets/team-photos/Mallikarjuna.png";
+import SudhindraPhoto from "../assets/team-photos/Sudhindra.jpeg";
+import DeepakKumarPhoto from "../assets/team-photos/Deepak Kumar.jpeg";
+import NaveenKumarPhoto from "../assets/team-photos/Chitrala Naveen Kumar.jpeg";
+import RamyaPhoto from "../assets/team-photos/Ramya.jpeg";
+import SravanPhoto from "../assets/team-photos/Sravan Kumar.jpeg";
+import MohanPhoto from "../assets/team-photos/Tirumala Muni Mohan.jpeg";
+import VinayPhoto from "../assets/team-photos/Vinay Kumar.jpeg";
+import VivekPhoto from "../assets/team-photos/Amujuri Vivek.jpeg";
+import VeenaPhoto from "../assets/team-photos/Veena.jpeg";
+import PrahladaPhoto from "../assets/team-photos/Prahlada.jpeg";
+import RamkiPhoto from "../assets/team-photos/Rama Krishna.jpeg";
+import SahanaPhoto from "../assets/team-photos/Sahana.jpeg";
+
 const About: React.FC = () => {
   const values = [
     {
@@ -32,27 +47,94 @@ const About: React.FC = () => {
 
   const team = [
     {
-      name: "MalliKarjuna",
-      role: "Founder & CEO",
-      bio: "Former educator with 20+ years of experience in rural education development.",
-      image:
-        "https://images.pexels.com/photos/3760275/pexels-photo-3760275.jpeg?auto=compress&cs=tinysrgb&w=300",
+      name: "Mallikarjuna",
+      role: "Founder",
+      bio: "Visionary leader with extensive experience in education and social development, driving Rainbow Shiksha's mission to transform lives through education.",
+      image: MallikarjunaPhoto,
       linkedin: "#",
     },
     {
-      name: "Rajesh Kumar",
-      role: "Program Director",
-      bio: "Expert in community development with deep understanding of educational challenges in India.",
-      image:
-        "https://images.pexels.com/photos/3777946/pexels-photo-3777946.jpeg?auto=compress&cs=tinysrgb&w=300",
+      name: "Sudhindra",
+      role: "Secretary",
+      bio: "Dedicated to organizational excellence and ensuring smooth operations across all Rainbow Shiksha programs and initiatives.",
+      image: SudhindraPhoto,
       linkedin: "#",
     },
     {
-      name: "Priya Patel",
-      role: "Operations Manager",
-      bio: "MBA graduate passionate about non-profit management and sustainable social impact.",
-      image:
-        "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=300",
+      name: "Deepak Kumar",
+      role: "Treasurer",
+      bio: "Financial stewardship expert committed to transparent and responsible management of resources for maximum educational impact.",
+      image: DeepakKumarPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Naveen Kumar",
+      role: "General Secretary",
+      bio: "Strategic coordinator ensuring effective communication and collaboration across all organizational activities and partnerships.",
+      image: NaveenKumarPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Ramya",
+      role: "Deputy General Secretary",
+      bio: "Supporting organizational growth and development through strategic planning and program implementation.",
+      image: RamyaPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Sravan",
+      role: "Member Secretary",
+      bio: "Focused on member engagement and community building to strengthen Rainbow Shiksha's impact and reach.",
+      image: SravanPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Mohan",
+      role: "Joint Secretary",
+      bio: "Collaborative leader working closely with the General Secretary to ensure organizational efficiency and effectiveness.",
+      image: MohanPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Vinay Kumar",
+      role: "Board Member",
+      bio: "Strategic advisor contributing valuable insights and guidance to Rainbow Shiksha's mission and growth.",
+      image: VinayPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Vivek",
+      role: "Board Member",
+      bio: "Passionate advocate for educational equity, bringing fresh perspectives and innovative approaches to our work.",
+      image: VivekPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Veena",
+      role: "Board Member",
+      bio: "Dedicated to advancing educational opportunities and ensuring every child has access to quality learning experiences.",
+      image: VeenaPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Prahlada",
+      role: "Board Member",
+      bio: "Community-focused leader committed to building strong relationships and partnerships for sustainable impact.",
+      image: PrahladaPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Rama Krishna",
+      role: "Board Member",
+      bio: "Education advocate with deep understanding of local communities and their unique educational needs and challenges.",
+      image: RamkiPhoto,
+      linkedin: "#",
+    },
+    {
+      name: "Sahana",
+      role: "Trustee",
+      bio: "Trusted guardian of Rainbow Shiksha's values and mission, ensuring organizational integrity and long-term sustainability.",
+      image: SahanaPhoto,
       linkedin: "#",
     },
   ];
@@ -167,7 +249,7 @@ const About: React.FC = () => {
               Meet the passionate leaders driving our mission
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <div
                 key={index}
