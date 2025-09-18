@@ -6,7 +6,6 @@ const images = import.meta.glob(
   { eager: true, as: "url" } // return plain URLs instead of modules
 );
 
-console.log(images);
 
 // Self-contained Gallery: no props, HTML buttons only, no TS primitive annotations
 const Gallery = () => {

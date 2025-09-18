@@ -319,25 +319,29 @@ const Contact: React.FC = () => {
                 </p>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                  target="_blank"
+                    href="https://www.facebook.com/rainbowshiksha"
                     className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
                   >
                     f
                   </a>
                   <a
-                    href="#"
+                  target="_blank"
+                    href="https://www.twitter.com/rainbowshiksha"
                     className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors"
                   >
                     t
                   </a>
                   <a
-                    href="#"
+                  target="_blank"
+                    href="https://www.instagram.com/rainbowshiksha"
                     className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors"
                   >
                     i
                   </a>
                   <a
-                    href="#"
+                  target="_blank"
+                    href="https://www.linkedin.com/company/rainbowshiksha"
                     className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900 transition-colors"
                   >
                     in
@@ -354,7 +358,7 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Us</h2>
-            <p className="text-gray-600">Visit our headquarters in Mumbai</p>
+            <p className="text-gray-600">Visit our main branch</p>
           </div>
           <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
             <div className="text-center">

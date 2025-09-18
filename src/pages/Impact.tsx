@@ -9,6 +9,9 @@ import {
   Users,
 } from "lucide-react";
 import React, { useState } from "react";
+import KiranPhoto from "/src/assets/impact/Kiran.jpeg";
+import RamuluPhoto from "/src/assets/impact/Ramulu.jpeg";
+import IndraReddyPhoto from "/src/assets/impact/Indra Reddy.jpeg";
 
 const Impact: React.FC = () => {
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
@@ -16,7 +19,7 @@ const Impact: React.FC = () => {
   const impactStats = [
     {
       icon: Users,
-      number: "500+",
+      number: "25+",
       label: "Children Supported",
       description:
         "Direct educational support provided to children across India",
@@ -24,7 +27,7 @@ const Impact: React.FC = () => {
     },
     {
       icon: BookOpen,
-      number: "50+",
+      number: "5+",
       label: "Schools Partnered",
       description:
         "Active partnerships with schools in underserved communities",
@@ -32,14 +35,14 @@ const Impact: React.FC = () => {
     },
     {
       icon: GraduationCap,
-      number: "85%",
+      number: "95%",
       label: "Graduation Rate",
       description: "Children in our programs complete their primary education",
       trend: "Above national average",
     },
     {
       icon: Award,
-      number: "95%",
+      number: "100+",
       label: "Parent Satisfaction",
       description: "Parents report improvement in their children's education",
       trend: "Consistent across all programs",
@@ -61,44 +64,35 @@ const Impact: React.FC = () => {
       quote:
         "Rainbow Shiksha gave me the books and support I needed to succeed. Now I want to help other children like me.",
     },
-    // {
-    //   name: "Arjun Kumar",
-    //   age: 14,
-    //   location: "Urban Slum, Mumbai",
-    //   before: "Dropped out of school to help family with income",
-    //   after:
-    //     "Returned to school with scholarship support, excelling in technology",
-    //   image:
-    //     "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=400",
-    //   achievement: "Won district-level coding competition",
-    //   quote:
-    //     "The scholarship program helped my family understand that education is more valuable than immediate income.",
-    // },
-    // {
-    //   name: "Meera Patel",
-    //   age: 13,
-    //   location: "Rural Gujarat",
-    //   before: "Had never touched a computer, limited English skills",
-    //   after: "Fluent in digital tools, helps teach other children in community",
-    //   image:
-    //     "https://images.pexels.com/photos/8923015/pexels-photo-8923015.jpeg?auto=compress&cs=tinysrgb&w=400",
-    //   achievement: "Created educational videos for younger students",
-    //   quote:
-    //     "Learning computers opened up a whole new world for me. I can now imagine a future I never dreamed of before.",
-    // },
-    // {
-    //   name: "Ravi Singh",
-    //   age: 12,
-    //   location: "Rural Rajasthan",
-    //   before: "Irregular school attendance due to work obligations",
-    //   after:
-    //     "Regular attendance, improved grades, family supportive of education",
-    //   image:
-    //     "https://images.pexels.com/photos/8923018/pexels-photo-8923018.jpeg?auto=compress&cs=tinysrgb&w=400",
-    //   achievement: "Perfect attendance for 18 months",
-    //   quote:
-    //     "When the teachers started visiting our home and talking to my parents, everything changed. Now my whole family supports my education.",
-    // },
+  
+    {
+      name: "Ramulu",
+      location: "Rural Kurnool District, Andhra Pradesh",
+      before: "Struggled to pay his college fees and even risked losing his certificates due to financial hardship.",
+      after: "With Rainbow Shiksha’s support from Inter 2nd year through his Degree Final year, Ramulu completed his postgraduate studies and secured a government job at Kurnool Medical College.",
+      image: RamuluPhoto,
+      achievement: "Completed his Degree Final year",
+      quote: "Without this support, I would have never completed my education. Now I stand proud as a government employee, ready to help others like me."
+    },
+    {
+      name: "Indra Reddy",
+      location: "Rural Kurnool District, Andhra Pradesh",
+      before: "Faced the possibility of discontinuing her studies because her family couldn’t afford tuition fees.",
+      after: "Rainbow Shiksha sponsored her education from Inter 1st year to her Degree Final year, enabling her to graduate with distinction and begin a professional career.",
+      image: IndraReddyPhoto,
+      achievement: "Graduated with top honors in her degree program",
+      quote: "Education changed everything for me. I hope to give back so no student has to drop out for lack of money."
+    },
+    {
+      name: "Kiran",
+      location: "Rural Kurnool District, Andhra Pradesh",
+      before: "Financial struggles forced him to consider dropping out after 8th Class.",
+      after: "Rainbow Shiksha paid his school fees at GSNR Kurnool, allowing him to continue studying and chase his dreams.",
+      image: KiranPhoto,
+      achievement: "Promoted successfully with strong academic progress",
+      quote: "I thought my schooling would end, but Rainbow Shiksha gave me a second chance. Now I study with confidence."
+    }
+    
   ];
 
   const programImpact = [
@@ -246,7 +240,6 @@ const Impact: React.FC = () => {
                     {successStories[currentStoryIndex].name}
                   </h3>
                   <p className="text-blue-600 font-medium">
-                    {successStories[currentStoryIndex].age} years old •{" "}
                     {successStories[currentStoryIndex].location}
                   </p>
                 </div>

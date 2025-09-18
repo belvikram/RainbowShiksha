@@ -16,6 +16,7 @@ import VeenaPhoto from "../assets/team-photos/Veena.jpeg";
 import PrahladaPhoto from "../assets/team-photos/Prahlada.jpeg";
 import RamkiPhoto from "../assets/team-photos/Rama Krishna.jpeg";
 import SahanaPhoto from "../assets/team-photos/Sahana.jpeg";
+import VikramPhoto from "../assets/team-photos/Vikram.jpeg";
 
 const About: React.FC = () => {
   const values = [
@@ -136,6 +137,13 @@ const About: React.FC = () => {
       bio: "Trusted guardian of Rainbow Shiksha's values and mission, ensuring organizational integrity and long-term sustainability.",
       image: SahanaPhoto,
       linkedin: "#",
+    },
+    {
+      name: "Vikram",
+      role: "IT Head",
+      bio: "IT Head of Rainbow Shiksha, responsible for the organization's IT infrastructure and systems.",
+      image: VikramPhoto,
+      linkedin: "https://www.linkedin.com/in/vikrambelde",
     },
   ];
 
@@ -272,12 +280,12 @@ const About: React.FC = () => {
                   >
                     <Linkedin className="h-5 w-5" />
                   </a>
-                  <a
+                  {/* <a
                     href="mailto:team@rainbowshiksha.org"
                     className="text-gray-400 hover:text-blue-600 transition-colors"
                   >
                     <Mail className="h-5 w-5" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             ))}

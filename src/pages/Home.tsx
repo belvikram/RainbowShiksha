@@ -10,40 +10,39 @@ import {
 
 import { Link } from "react-router-dom";
 import React from "react";
-import storyImage from "/src/assets/uploads/2022/09/photos-2022-095.jpg";
+import KiranPhoto from "/src/assets/uploads/2022/09/photos-2022-095.jpg";
+import RamuluPhoto from "/src/assets/impact/Ramulu.jpeg";
+import IndraReddyPhoto from "/src/assets/impact/Indra Reddy.jpeg";
 
 const Home: React.FC = () => {
   const stats = [
-    { number: "500+", label: "Children Supported", icon: Users },
-    { number: "50+", label: "Schools Partnered", icon: BookOpen },
-    { number: "₹12L+", label: "Funds Raised", icon: Heart },
-    { number: "25+", label: "Awards & Recognition", icon: Award },
+    { number: "25+", label: "Children Supported", icon: Users },
+    { number: "5+", label: "Schools Partnered", icon: BookOpen },
+    { number: "₹3L+", label: "Funds Raised", icon: Heart },
+    { number: "2+", label: "Awards & Recognition", icon: Award },
   ];
 
   const impactStories = [
     {
-      name: "Arjun Prasad",
-      age: 18,
+      name: "Kiran",
       story:
-        "From struggling with basic reading to becoming top of her class, Arjun's journey shows the power of education.",
-      image: storyImage,
-      impact: "Now reads 50+ books per year",
+        "Kiran faced severe financial struggles that nearly ended his education. We stepped in and paid his school fees for one year (8th Class, GSNR Kurnool), ensuring he could continue his studies without interruption.",
+      image: KiranPhoto,
+      impact: "Continued his education without interruption",
     },
     {
-      name: "Arjun Prasad",
-      age: 14,
+      name: "Ramulu",
       story:
-        "With access to science equipment, Arjun discovered his passion for physics and dreams of becoming an engineer.",
-      image: storyImage,
-      impact: "Scored 95% in science",
+        "Ramulu had completed his degree but couldn’t reclaim his certificates due to unpaid fees. Rainbow Shiksha covered his college dues, enabling him to retrieve his certificates. Our support extended from his Inter 2nd year through to his Degree Final year, empowering him to move forward with confidence.",
+      image: RamuluPhoto,
+      impact: "Retrieved his certificates",
     },
     {
-      name: "Arjun Prasad",
-      age: 13,
+      name: "Indra Reddy",
       story:
-        "Thanks to digital literacy programs, Meera now helps her family manage their small business online.",
-      image: storyImage,
-      impact: "Increased family income by 30%",
+        "Indra Reddy’s dream of higher education was at risk due to financial constraints. We paid his college fees and supported him consistently from Inter 1st year until his Degree Final year, walking alongside him throughout his educational journey",
+      image: IndraReddyPhoto,
+      impact: "Completed his Degree Final year",
     },
   ];
 
@@ -101,7 +100,7 @@ const Home: React.FC = () => {
             </div>
             <div className="relative">
               <img
-                src={storyImage}
+                src={KiranPhoto}
                 alt="Happy children in classroom"
                 className="rounded-2xl shadow-2xl"
               />
@@ -111,7 +110,7 @@ const Home: React.FC = () => {
                     <Heart className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">500+</div>
+                    <div className="text-2xl font-bold text-gray-900">25+</div>
                     <div className="text-sm text-gray-600">Lives Changed</div>
                   </div>
                 </div>
@@ -175,7 +174,7 @@ const Home: React.FC = () => {
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {story.name}, {story.age}
+                    {story.name}
                   </h3>
                   <p className="text-gray-600 mb-4">{story.story}</p>
                   <div className="bg-blue-50 p-3 rounded-lg">
