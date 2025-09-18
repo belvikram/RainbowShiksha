@@ -194,27 +194,21 @@ Youtube: Yet to Create one*/}
 
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-gray-400">
-            © 2024 Rainbow Shiksha. All rights reserved.
+            ©2025 Rainbow Shiksha. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a
-              href="#"
+            <Link
+              to="/privacy-policy"
               className="text-sm text-gray-400 hover:text-white transition-colors"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/terms-conditions"
               className="text-sm text-gray-400 hover:text-white transition-colors"
             >
               Terms & Conditions
-            </a>
-            <a
-              href="#"
-              className="text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              Transparency
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -360,17 +360,32 @@ const Contact: React.FC = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Us</h2>
             <p className="text-gray-600">Visit our main branch</p>
           </div>
-          <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-              <p className="text-gray-600">
-                Interactive map would be embedded here
-              </p>
-              <p className="text-sm text-gray-500">
-                B.R Reddy Colony, Near GSNR School, Industrial Estate, Kallur
-                (M), Kurnool (Dist), Andhra Pradesh 518003
-              </p>
-            </div>
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1234567890123!2d78.0202111!3d15.7974842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDQ3JzUwLjkiTiA3OMKwMDEnMTIuOCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Rainbow Shiksha Location"
+            ></iframe>
+          </div>
+          <div className="text-center mt-4">
+            <p className="text-sm text-gray-500">
+              B.R Reddy Colony, Near GSNR School, Industrial Estate, Kallur
+              (M), Kurnool (Dist), Andhra Pradesh 518003
+            </p>
+            <a
+              href="https://maps.app.goo.gl/Nkn75EEiKU9cesfK6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center mt-2 text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              <MapPin className="h-4 w-4 mr-1" />
+              Open in Google Maps
+            </a>
           </div>
         </div>
       </section>

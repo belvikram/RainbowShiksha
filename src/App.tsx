@@ -11,6 +11,8 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Impact from "./pages/Impact";
 import OurStory from "./pages/OurStory";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsAndConditions />} />
           </Routes>
         </main>
         <Footer />
