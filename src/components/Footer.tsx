@@ -142,9 +142,6 @@ const Footer: React.FC = () => {
           {/* Newsletter & Social */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Subscribe to our newsletter for updates on our impact.
-            </p>
             {/* 
             
             FB: https://www.facebook.com/RainbowShiksha?mibextid=LQQJ4d  (or) https://www.facebook.com/RainbowShiksha/

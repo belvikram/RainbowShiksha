@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { Calendar, MapPin, Clock, Users, ArrowRight, Filter } from 'lucide-react';
+import { Calendar, MapPin, Clock, Users, Filter } from 'lucide-react';
+
+// Import past event images
+import ChildrensDayImage from '../assets/past-events/childrens day.png';
+import SwamyVivekanandaImage from '../assets/past-events/swamy Vivekananda birthday.png';
+import OrphanageImage from '../assets/past-events/orphanage.png';
 
 const Events: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -68,37 +73,37 @@ const Events: React.FC = () => {
 
   const pastEvents = [
     {
-      id: 5,
-      title: 'Education Summit 2023',
-      date: 'December 10, 2023',
-      location: 'Pune International Center',
-      type: 'awareness',
-      description: 'Three-day summit bringing together educators, policymakers, and NGOs to discuss education reform.',
-      image: 'https://images.pexels.com/photos/8923166/pexels-photo-8923166.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 500,
-      outcome: 'Raised ₹2.5L for rural school infrastructure'
+      id: 1,
+      title: 'Children\'s Day Celebration 2021',
+      date: 'November 14, 2021',
+      location: 'Orphanage in Karnataka',
+      type: 'program',
+      description: 'We organized a heartwarming Children\'s Day celebration at an orphanage in Karnataka, bringing joy, laughter, and educational activities to the children. Our team spent quality time with the children, engaging them in creative activities and providing them with essential supplies and gifts.',
+      image: ChildrensDayImage,
+      attendees: 45,
+      outcome: 'Brought smiles to 45 children and distributed educational materials'
     },
     {
-      id: 6,
-      title: 'Diwali Celebration with Children',
-      date: 'November 12, 2023',
-      location: 'Partner Schools (15 locations)',
+      id: 2,
+      title: 'Swami Vivekananda Birth Anniversary Visit',
+      date: 'January 12, 2022',
+      location: 'Orphanage in Karnataka',
       type: 'program',
-      description: 'Festival celebration with children, including cultural programs and distribution of gifts.',
-      image: 'https://images.pexels.com/photos/8923018/pexels-photo-8923018.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 800,
-      outcome: 'Distributed gifts to 800+ children'
+      description: 'On the auspicious occasion of Swami Vivekananda\'s birth anniversary, our dedicated team visited an orphanage in Karnataka to honor his legacy of service and compassion. We conducted inspiring sessions about moral values, distributed educational resources, and shared the timeless teachings of Swami Vivekananda with the children.',
+      image: SwamyVivekanandaImage,
+      attendees: 38,
+      outcome: 'Inspired 38 children with Vivekananda\'s teachings and values'
     },
     {
-      id: 7,
-      title: 'Teacher Training Workshop',
-      date: 'October 15, 2023',
-      location: 'Multiple Centers',
+      id: 3,
+      title: 'Interactive Games & Activities Program 2024',
+      date: 'March 15, 2024',
+      location: 'Lingampally, Hyderabad',
       type: 'program',
-      description: 'Professional development workshop focusing on innovative teaching methodologies.',
-      image: 'https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 120,
-      outcome: 'Trained 120 teachers across 3 states'
+      description: 'Our team conducted an engaging games and activities program for children at an orphanage in Lingampally, Hyderabad. Through interactive games, storytelling sessions, and creative workshops, we fostered teamwork, creativity, and joy among the children while providing them with memorable experiences.',
+      image: OrphanageImage,
+      attendees: 52,
+      outcome: 'Organized interactive games and activities for 52 children'
     }
   ];
 
@@ -232,6 +237,15 @@ const Events: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pastEvents.map((event) => (
               <div key={event.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                {/* Event Image */}
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -268,26 +282,6 @@ const Events: React.FC = () => {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      <section className="bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Stay Updated</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Subscribe to our newsletter to get notified about upcoming events, 
-            program updates, and ways to get involved.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 px-6 py-3 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 transform hover:scale-105">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
