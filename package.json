@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && cp -r dist/* docs/",
-    "deploy": "npm run build && git add . && git commit -m 'Bundle update' && git push origin main",
+    "build:deploy": "npm run build && git add . && git commit -m 'Bundle update' && git push origin main",
     "lint": "eslint .",
     "preview": "vite preview"
   },
