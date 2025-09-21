@@ -7,51 +7,62 @@ const Events: React.FC = () => {
   const upcomingEvents = [
     {
       id: 1,
-      title: 'Annual Fundraising Gala 2024',
-      date: 'March 15, 2024',
-      time: '6:00 PM - 11:00 PM',
-      location: 'Grand Ballroom, Mumbai Convention Center',
-      type: 'fundraiser',
-      description: 'Join us for an elegant evening of dinner, entertainment, and fundraising to support our educational programs.',
-      image: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 250,
-      price: '₹5,000 per person'
+      title: 'Scribe Arrangement for Visually Impaired Students',
+      date: 'September 21, 2025',
+      time: '9:00 AM - 5:00 PM',
+      location: 'Tirupati, Andhra Pradesh',
+      type: 'support',
+      description: 'We have received a heartfelt request to arrange qualified scribes for two visually impaired students appearing for a competitive bank examination. Our dedicated team is actively reaching out to our trusted network of contacts in Tirupati to ensure these deserving students receive the support they need to excel in their academic pursuits.',
+      image: 'https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400',
+      attendees: 2,
+      price: 'Volunteer opportunity'
     },
     {
       id: 2,
-      title: 'School Supply Drive - Spring Collection',
-      date: 'April 2, 2024',
+      title: 'Children\'s Day Celebration 2025',
+      date: 'November 14, 2025',
       time: '10:00 AM - 4:00 PM',
-      location: 'Multiple Collection Centers',
-      type: 'awareness',
-      description: 'Help us collect books, notebooks, school bags, and educational materials for children in need.',
-      image: 'https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 150,
+      location: 'Hyderabad & Kurnool',
+      type: 'program',
+      description: 'As children represent our future generation, we are honored to organize a special Children\'s Day celebration across Hyderabad and Kurnool. This meaningful event will focus on sharing invaluable guidance and inspiring young minds with the timeless importance of moral values and ethics that shape responsible, meaningful lives in our society.',
+      image: 'https://images.pexels.com/photos/8923018/pexels-photo-8923018.jpeg?auto=compress&cs=tinysrgb&w=400',
+      attendees: 500,
       price: 'Free participation'
     },
     {
       id: 3,
-      title: 'Digital Literacy Workshop',
-      date: 'April 20, 2024',
-      time: '2:00 PM - 6:00 PM',
-      location: 'Rainbow Shiksha Learning Center',
+      title: 'National Youth Day Celebration 2026',
+      date: 'January 14, 2026',
+      time: '9:00 AM - 6:00 PM',
+      location: 'Hyderabad',
       type: 'program',
-      description: 'Training session for teachers on integrating digital tools in classroom education.',
-      image: 'https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 50,
-      price: 'Free for educators'
+      description: 'On this momentous National Youth Day, we dedicate ourselves to walking in the inspiring footsteps of Sri Swami Vivekananda. This special celebration will focus on inspiring young minds to embrace his timeless values and ideals, empowering them to build a brighter, more compassionate future for our nation.',
+      image: 'https://images.pexels.com/photos/8923166/pexels-photo-8923166.jpeg?auto=compress&cs=tinysrgb&w=400',
+      attendees: 300,
+      price: 'Free registration'
     },
     {
       id: 4,
-      title: 'Volunteer Orientation Program',
-      date: 'May 5, 2024',
-      time: '10:00 AM - 2:00 PM',
-      location: 'Rainbow Shiksha Headquarters',
-      type: 'volunteer',
-      description: 'Comprehensive orientation for new volunteers interested in supporting our educational programs.',
-      image: 'https://images.pexels.com/photos/8923015/pexels-photo-8923015.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 75,
-      price: 'Free registration'
+      title: 'Sri Madhava School Website Development',
+      date: 'Ongoing Project',
+      time: 'Remote collaboration',
+      location: 'Online',
+      type: 'support',
+      description: 'At the special request of Sri Madhava School management, our skilled IT team is diligently working on creating a professional, user-friendly website. This digital platform will provide parents, students, and visitors with convenient access to all essential school information, enhancing communication and engagement within the educational community.',
+      image: 'https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=400',
+      attendees: 5,
+    },
+    {
+      id: 5,
+      title: 'Laptop Donation Initiative - Sira, Karnataka',
+      date: 'Ongoing Initiative',
+      time: 'Continuous effort',
+      location: 'Sira, Karnataka',
+      type: 'support',
+      description: 'Responding to a heartfelt request from school management in Sira, Karnataka, our dedicated Rainbow team member Srinivas Gupta Sir is actively working to arrange additional laptops for students. This initiative ensures enhanced access to digital learning resources, complementing the existing infrastructure to provide students with comprehensive educational support.',
+      image: 'https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400',
+      attendees: 50,
+      price: 'Donation opportunity'
     }
   ];
 
@@ -93,9 +104,9 @@ const Events: React.FC = () => {
 
   const filterOptions = [
     { key: 'all', label: 'All Events' },
-    { key: 'fundraiser', label: 'Fundraising' },
-    { key: 'awareness', label: 'Awareness' },
+    { key: 'support', label: 'Support' },
     { key: 'program', label: 'Programs' },
+    { key: 'awareness', label: 'Awareness' },
     { key: 'volunteer', label: 'Volunteer' }
   ];
 
@@ -156,17 +167,12 @@ const Events: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredUpcomingEvents.map((event) => (
               <div key={event.id} className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-48 object-cover"
-                />
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      event.type === 'fundraiser' ? 'bg-blue-100 text-blue-800' :
-                      event.type === 'awareness' ? 'bg-green-100 text-green-800' :
-                      event.type === 'program' ? 'bg-yellow-100 text-yellow-800' :
+                      event.type === 'support' ? 'bg-blue-100 text-blue-800' :
+                      event.type === 'program' ? 'bg-green-100 text-green-800' :
+                      event.type === 'awareness' ? 'bg-yellow-100 text-yellow-800' :
                       'bg-purple-100 text-purple-800'
                     }`}>
                       {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
@@ -196,9 +202,6 @@ const Events: React.FC = () => {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 transform hover:scale-105">
-                    Register / RSVP
-                  </button>
                 </div>
               </div>
             ))}
@@ -229,17 +232,12 @@ const Events: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pastEvents.map((event) => (
               <div key={event.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-48 object-cover"
-                />
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      event.type === 'fundraiser' ? 'bg-blue-100 text-blue-800' :
-                      event.type === 'awareness' ? 'bg-green-100 text-green-800' :
-                      event.type === 'program' ? 'bg-yellow-100 text-yellow-800' :
+                      event.type === 'support' ? 'bg-blue-100 text-blue-800' :
+                      event.type === 'program' ? 'bg-green-100 text-green-800' :
+                      event.type === 'awareness' ? 'bg-yellow-100 text-yellow-800' :
                       'bg-purple-100 text-purple-800'
                     }`}>
                       {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
