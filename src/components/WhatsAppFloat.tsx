@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { X, Users } from 'lucide-react';
+import { X, Users, MessageCircle } from 'lucide-react';
 import WhatsAppLogo from '../assets/social-media-logos/whatsAppLogo.png';
 
 const WhatsAppFloat: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleJoinGroup = () => {
-    // Replace with your actual WhatsApp group link
-    const whatsappGroupLink = "https://wa.me/919959277190"; // You can update this to your group invite link
+    // WhatsApp group invite link
+    const whatsappGroupLink = "https://chat.whatsapp.com/F8hKH95ua0ZAq4hKhHvZtM";
     window.open(whatsappGroupLink, '_blank');
   };
 
   const handleWhatsAppChat = () => {
     // Direct message to your WhatsApp number
-    const whatsappNumber = "919959277190";
+    const whatsappNumber = "919700400237";
     const message = encodeURIComponent("Hi! I'm interested in joining Rainbow Shiksha's mission. Can you tell me more about how I can get involved?");
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
