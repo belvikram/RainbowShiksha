@@ -14,6 +14,7 @@ import ourJouneryImage6 from "/src/assets/our-journey/image6.jpg";
 import ourJouneryImage7 from "/src/assets/our-journey/image7.jpg";
 import ourJouneryImage8 from "/src/assets/our-journey/image8.jpg";
 import ourJouneryImage9 from "/src/assets/our-journey/image9.jpg";
+import MallikarjunaPhoto from "../assets/team-photos/Mallikarjuna.png";
 
 const OurStory: React.FC = () => {
   const timeline = [
@@ -284,13 +285,13 @@ const OurStory: React.FC = () => {
           </blockquote>
           <div className="flex items-center justify-center">
             <img
-              src="https://images.pexels.com/photos/3760275/pexels-photo-3760275.jpeg?auto=compress&cs=tinysrgb&w=100"
+              src={MallikarjunaPhoto}
               alt="Mallikarjuna"
               className="w-12 h-12 rounded-full mr-4"
             />
             <div className="text-left">
-              <div className="font-semibold text-gray-900">Mallikarjuna</div>
-              <div className="text-sm text-gray-600">Founder & CEO</div>
+              <div className="font-semibold text-gray-900">Mallikarjuna M</div>
+              <div className="text-sm text-gray-600">Founder</div>
             </div>
           </div>
         </div>
@@ -309,7 +310,7 @@ const OurStory: React.FC = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-3xl font-bold mb-2">10,000+</div>
+              <div className="text-3xl font-bold mb-2">500+</div>
               <div className="text-sm opacity-80">Children by 2030</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
@@ -317,7 +318,7 @@ const OurStory: React.FC = () => {
               <div className="text-sm opacity-80">Nationwide Presence</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-3xl font-bold mb-2">500+</div>
+              <div className="text-3xl font-bold mb-2">50+</div>
               <div className="text-sm opacity-80">Partner Schools</div>
             </div>
           </div>

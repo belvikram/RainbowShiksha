@@ -148,12 +148,9 @@ const About: React.FC = () => {
   ];
 
   const partners = [
-    { name: "UNICEF India", logo: "🏢" },
-    { name: "Microsoft India", logo: "💻" },
-    { name: "Tata Trust", logo: "🏭" },
-    { name: "Akshaya Patra", logo: "🍽️" },
-    { name: "Teach for India", logo: "📚" },
-    { name: "CRY Foundation", logo: "👶" },
+    { name: "Sri Madhava Vidhya Mandira School", logo: "🏫" },
+    { name: "KBR Foundation", logo: "🤝" },
+    { name: "AP & TS Govt Schools", logo: "🏛️" },
   ];
 
   return (
@@ -328,19 +325,19 @@ const About: React.FC = () => {
               Recognition & Awards
             </h2>
             <p className="text-xl text-gray-600">
-              Acknowledgments for our commitment to educational excellence
+              Our events and initiatives featured in regional newspapers
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-yellow-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">
-                Best NGO Award 2023
+                Regional Newspaper Coverage
               </h3>
               <p className="text-sm text-gray-600">
-                Education Excellence Foundation
+                Our events and initiatives have been featured in regional newspapers, highlighting our impact in the community
               </p>
             </div>
             <div className="text-center">
@@ -348,27 +345,22 @@ const About: React.FC = () => {
                 <Award className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">
-                Social Impact Award
+                Community Recognition
               </h3>
-              <p className="text-sm text-gray-600">Maharashtra Government</p>
+              <p className="text-sm text-gray-600">
+                Local media coverage showcasing our educational programs and community engagement efforts
+              </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-green-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">
-                Innovation in Education
+                Media Features
               </h3>
-              <p className="text-sm text-gray-600">UNESCO India</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Youth Empowerment
-              </h3>
-              <p className="text-sm text-gray-600">UNICEF Recognition</p>
+              <p className="text-sm text-gray-600">
+                Regular coverage of our events and activities in regional print media, amplifying our mission
+              </p>
             </div>
           </div>
         </div>
