@@ -13,6 +13,7 @@ import Impact from "./pages/Impact";
 import OurStory from "./pages/OurStory";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <WhatsAppFloat />
       </div>
     </Router>
   );
