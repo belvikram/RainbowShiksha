@@ -254,21 +254,6 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              {/* Emergency Contact */}
-              <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-6 border-l-4 border-red-500">
-                <h3 className="text-lg font-semibold text-red-800 mb-2">
-                  Emergency Contact
-                </h3>
-                <p className="text-red-700 text-sm mb-2">
-                  For urgent matters regarding child welfare or safety:
-                </p>
-                <div className="flex items-center text-red-800">
-                  <Phone className="h-4 w-4 mr-2" />
-                  <span className="font-medium">+91 98765 43211</span>
-                </div>
-                <p className="text-red-600 text-xs mt-2">Available 24/7</p>
-              </div>
-
               {/* FAQ */}
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-center mb-4">
@@ -292,8 +277,7 @@ const Contact: React.FC = () => {
                       Can I visit the schools you support?
                     </h4>
                     <p className="text-gray-600">
-                      Yes! We organize monthly school visits for donors and
-                      volunteers. Contact us to schedule.
+                      Yes! We organize school visits based on the upcoming events. Pleaes contact us to schedule.
                     </p>
                   </div>
                   <div>

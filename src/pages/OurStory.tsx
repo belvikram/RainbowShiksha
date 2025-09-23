@@ -1,6 +1,6 @@
-import { Award, BookOpen, Calendar, Heart, Users } from "lucide-react";
+import { Award, BookOpen, Calendar, Heart, Users, ChevronLeft, ChevronRight, X } from "lucide-react";
 
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import ourJouneryImage1 from "/src/assets/our-journey/image1.jpg";
 import ourJouneryImage10 from "/src/assets/our-journey/image10.jpg";
 import ourJouneryImage11 from "/src/assets/our-journey/image11.jpg";
@@ -17,6 +17,8 @@ import ourJouneryImage9 from "/src/assets/our-journey/image9.jpg";
 import MallikarjunaPhoto from "../assets/team-photos/Mallikarjuna.png";
 
 const OurStory: React.FC = () => {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
   const timeline = [
     {
       year: "2013",
@@ -124,6 +126,33 @@ const OurStory: React.FC = () => {
     },
   ];
 
+  // Lightbox functions
+  const openLightbox = useCallback((index: number) => setLightboxIndex(index), []);
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+  const nextImage = useCallback(
+    () => setLightboxIndex((i) => (i === null ? i : (i + 1) % timeline.length)),
+    [timeline.length]
+  );
+  const prevImage = useCallback(
+    () =>
+      setLightboxIndex((i) =>
+        i === null ? i : (i - 1 + timeline.length) % timeline.length
+      ),
+    [timeline.length]
+  );
+
+  // Keyboard navigation in lightbox
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (lightboxIndex === null) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxIndex, closeLightbox, nextImage, prevImage]);
+
   const challenges = [
     {
       title: "Limited Access to Schools",
@@ -163,11 +192,32 @@ const OurStory: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Story
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-xl text-gray-600 leading-relaxed mb-8">
             From a small initiative to a movement that's transforming lives
             across India. This is the journey of Rainbow Shiksha and the
             communities we serve.
           </p>
+          <a
+            href="/src/assets/ppt/RainbowShiksha-PPT.pdf"
+            download="RainbowShiksha-PPT.pdf"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 hover:from-blue-700 hover:via-green-700 hover:to-yellow-700 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105 transform"
+          >
+            <svg
+              className="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Download Our Story
+          </a>
         </div>
       </section>
 
@@ -244,11 +294,18 @@ const OurStory: React.FC = () => {
                   }`}
                 >
                   <div className="lg:w-1/2">
-                    <img
-                      src={milestone.image}
-                      alt={milestone.title}
-                      className="rounded-xl shadow-lg w-full h-64 object-cover"
-                    />
+                    <button
+                      type="button"
+                      onClick={() => openLightbox(index)}
+                      className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-xl overflow-hidden"
+                      aria-label={`Open ${milestone.title} image`}
+                    >
+                      <img
+                        src={milestone.image}
+                        alt={milestone.title}
+                        className="rounded-xl shadow-lg w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </button>
                   </div>
 
                   <div className="lg:w-1/2">
@@ -324,6 +381,67 @@ const OurStory: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          {/* Backdrop */}
+          <button
+            type="button"
+            aria-label="Close backdrop"
+            onClick={closeLightbox}
+            className="absolute inset-0 bg-black/80"
+          />
+
+          {/* Dialog */}
+          <div className="relative max-w-5xl w-full mx-4">
+            {/* Close */}
+            <button
+              type="button"
+              onClick={closeLightbox}
+              aria-label="Close"
+              className="absolute top-2 right-2 inline-flex items-center justify-center rounded-full bg-black/60 p-2 text-white shadow focus:outline-none focus-visible:ring-2"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            {/* Prev / Next */}
+            {timeline.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={prevImage}
+                  aria-label="Previous"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 inline-flex items-center justify-center rounded-full bg-black/60 p-2 text-white shadow focus:outline-none focus-visible:ring-2"
+                >
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={nextImage}
+                  aria-label="Next"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 inline-flex items-center justify-center rounded-full bg-black/60 p-2 text-white shadow focus:outline-none focus-visible:ring-2"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </>
+            )}
+
+            <img
+              src={timeline[lightboxIndex].image}
+              alt={timeline[lightboxIndex].title}
+              className="w-full max-h-[85vh] object-contain rounded-xl"
+            />
+
+            <div className="mt-3 text-white text-center">
+              <div className="text-sm font-medium">{timeline[lightboxIndex].title}</div>
+              <div className="text-xs opacity-90">
+                {timeline[lightboxIndex].year} • Click outside or press Escape to close
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

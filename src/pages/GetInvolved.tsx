@@ -88,14 +88,6 @@ const GetInvolved: React.FC = () => {
       skills: ['Social media marketing', 'Content creation', 'Analytics'],
       stipend: 'Paid internship'
     },
-    {
-      title: 'Research & Impact Assessment Intern',
-      duration: '4-6 months',
-      location: 'Field & Office',
-      description: 'Conduct research on program effectiveness and compile impact reports.',
-      skills: ['Research methodology', 'Data collection', 'Report writing'],
-      stipend: 'Paid internship'
-    }
   ];
 
   return (
@@ -283,15 +275,15 @@ const GetInvolved: React.FC = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-3xl font-bold mb-2">150+</div>
+              <div className="text-3xl font-bold mb-2">50+</div>
               <div className="text-sm opacity-80">Active Volunteers</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-3xl font-bold mb-2">25+</div>
+              <div className="text-3xl font-bold mb-2">5+</div>
               <div className="text-sm opacity-80">Corporate Partners</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-3xl font-bold mb-2">5000+</div>
+              <div className="text-3xl font-bold mb-2">3000+</div>
               <div className="text-sm opacity-80">Volunteer Hours/Month</div>
             </div>
           </div>

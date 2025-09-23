@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const images = import.meta.glob(
   "/src/assets/uploads/**/*.{png,jpg,jpeg,svg}",
@@ -9,7 +9,7 @@ const images = import.meta.glob(
 
 // Self-contained Gallery: no props, HTML buttons only, no TS primitive annotations
 const Gallery = () => {
-  const [index, setIndex] = useState(null); // active photo index or null
+  const [index, setIndex] = useState<number | null>(null); // active photo index or null
   const urls = Object.values(images); // array of URL strings
   //   return (
   //     <>
@@ -26,46 +26,11 @@ const Gallery = () => {
   //     </>
   //   );
 
-  // Centralized photo data (includes dates inside the component)
-  const photos = [
-    {
-      src: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Annual Fundraising Gala 2024",
-      date: "2024-03-15",
-    },
-    {
-      src: "https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "School Supply Drive - Spring Collection",
-      date: "2024-04-02",
-    },
-    {
-      src: "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Digital Literacy Workshop",
-      date: "2024-04-20",
-    },
-    {
-      src: "https://images.pexels.com/photos/8923015/pexels-photo-8923015.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Volunteer Orientation Program",
-      date: "2024-05-05",
-    },
-    {
-      src: "https://images.pexels.com/photos/8923166/pexels-photo-8923166.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Education Summit 2023",
-      date: "2023-12-10",
-    },
-    {
-      src: "https://images.pexels.com/photos/8923018/pexels-photo-8923018.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Diwali Celebration with Children",
-      date: "2023-11-12",
-    },
-  ];
 
-  // Sort newest first
-  const sorted = photos
-    .slice()
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  // Use actual uploaded images for lightbox
+  const sorted = urls;
 
-  const open = useCallback((i) => setIndex(i), []);
+  const open = useCallback((i: number) => setIndex(i), []);
   const close = useCallback(() => setIndex(null), []);
   const next = useCallback(
     () => setIndex((i) => (i === null ? i : (i + 1) % sorted.length)),
@@ -81,7 +46,7 @@ const Gallery = () => {
 
   // Keyboard navigation in lightbox
   useEffect(() => {
-    const onKey = (e) => {
+    const onKey = (e: KeyboardEvent) => {
       if (index === null) return;
       if (e.key === "Escape") close();
       if (e.key === "ArrowRight") next();
@@ -91,17 +56,6 @@ const Gallery = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, [index, close, next, prev]);
 
-  const fmt = (iso) => {
-    try {
-      return new Date(iso).toLocaleDateString(undefined, {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-    } catch {
-      return iso;
-    }
-  };
 
   return (
     <section
@@ -121,40 +75,25 @@ const Gallery = () => {
         {/* Grid */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
           {urls.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={`Event ${i + 1}`}
-              className="rounded-lg shadow-md"
-            />
-          ))}
-          {/* {sorted.map((p, i) => (
-            <li key={`${p.title}-${p.date}`} className="relative">
+            <li key={i} className="relative">
               <button
                 type="button"
                 onClick={() => open(i)}
-                className="group block w-full text-left rounded-xl overflow-hidden shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-black/30"
-                aria-label={`Open ${p.title}`}
+                className="group block w-full text-left rounded-xl overflow-hidden shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-black/30 hover:shadow-lg transition-shadow duration-300"
+                aria-label={`Open image ${i + 1}`}
               >
                 <div className="relative w-full h-64 md:h-60 lg:h-64 bg-gray-100">
                   <img
-                    src={p.src}
-                    alt={p.title}
+                    src={src}
+                    alt="Gallery image"
                     loading="lazy"
                     decoding="async"
-                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
+                    className="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-90"
                   />
-
-                  <div className="absolute bottom-0 inset-x-0 bg-black/55 text-white p-3 md:p-3.5">
-                    <h3 className="text-sm font-semibold leading-tight line-clamp-2">
-                      {p.title}
-                    </h3>
-                    <p className="text-xs opacity-90">{fmt(p.date)}</p>
-                  </div>
                 </div>
               </button>
             </li>
-          ))} */}
+          ))}
         </ul>
 
         {/* Lightbox */}
@@ -203,15 +142,14 @@ const Gallery = () => {
               )}
 
               <img
-                src={sorted[index].src}
-                alt={sorted[index].title}
+                src={sorted[index]}
+                alt="Gallery image"
                 className="w-full max-h-[85vh] object-contain rounded-xl"
               />
 
               <div className="mt-3 text-white text-center">
-                <div className="text-sm font-medium">{sorted[index].title}</div>
                 <div className="text-xs opacity-90">
-                  {fmt(sorted[index].date)}
+                  Click outside or press Escape to close
                 </div>
               </div>
             </div>

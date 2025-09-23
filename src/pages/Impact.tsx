@@ -425,7 +425,7 @@ const Impact: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6">
-              <div className="text-4xl font-bold text-green-600 mb-2">80%</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">90%</div>
               <div className="text-sm font-medium text-gray-700">
                 Program Expenses
               </div>
@@ -434,7 +434,7 @@ const Impact: React.FC = () => {
               </div>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">15%</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">5%</div>
               <div className="text-sm font-medium text-gray-700">
                 Administrative
               </div>

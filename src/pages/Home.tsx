@@ -48,18 +48,18 @@ const Home: React.FC = () => {
 
   const upcomingEvents = [
     {
-      title: "Annual Fundraising Gala",
-      date: "March 15, 2024",
-      location: "Mumbai Convention Center",
+      title: 'Children\'s Day Celebration 2025',
+      date: 'November 14, 2025',
+      location: 'Hyderabad & Kurnool',
       description:
-        "Join us for an evening of celebration and fundraising for education.",
+        "As children represent our future generation, we are honored to organize a special Children\'s Day celebration across Hyderabad and Kurnool. This meaningful event will focus on sharing invaluable guidance and inspiring young minds with the timeless importance of moral values and ethics that shape responsible, meaningful lives in our society.",
     },
     {
-      title: "School Supply Drive",
-      date: "April 2, 2024",
-      location: "Various Locations",
+      title: 'National Youth Day Celebration 2026',
+      date: "January 14, 2026",
+      location: "Hyderabad",
       description:
-        "Help us collect books, stationery, and educational materials.",
+        "On this momentous National Youth Day, we dedicate ourselves to walking in the inspiring footsteps of Sri Swami Vivekananda. This special celebration will focus on inspiring young minds to embrace his timeless values and ideals, empowering them to build a brighter, more compassionate future for our nation.",
     },
   ];
 

@@ -10,18 +10,7 @@ const Events: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const upcomingEvents = [
-    {
-      id: 1,
-      title: 'Scribe Arrangement for Visually Impaired Students',
-      date: 'September 21, 2025',
-      time: '9:00 AM - 5:00 PM',
-      location: 'Tirupati, Andhra Pradesh',
-      type: 'support',
-      description: 'We have received a heartfelt request to arrange qualified scribes for two visually impaired students appearing for a competitive bank examination. Our dedicated team is actively reaching out to our trusted network of contacts in Tirupati to ensure these deserving students receive the support they need to excel in their academic pursuits.',
-      image: 'https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 2,
-      price: 'Volunteer opportunity'
-    },
+  
     {
       id: 2,
       title: 'Children\'s Day Celebration 2025',
@@ -31,7 +20,7 @@ const Events: React.FC = () => {
       type: 'program',
       description: 'As children represent our future generation, we are honored to organize a special Children\'s Day celebration across Hyderabad and Kurnool. This meaningful event will focus on sharing invaluable guidance and inspiring young minds with the timeless importance of moral values and ethics that shape responsible, meaningful lives in our society.',
       image: 'https://images.pexels.com/photos/8923018/pexels-photo-8923018.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 500,
+      attendees:" 50-100",
       price: 'Free participation'
     },
     {
@@ -43,7 +32,7 @@ const Events: React.FC = () => {
       type: 'program',
       description: 'On this momentous National Youth Day, we dedicate ourselves to walking in the inspiring footsteps of Sri Swami Vivekananda. This special celebration will focus on inspiring young minds to embrace his timeless values and ideals, empowering them to build a brighter, more compassionate future for our nation.',
       image: 'https://images.pexels.com/photos/8923166/pexels-photo-8923166.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 300,
+      attendees:" 50-100",
       price: 'Free registration'
     },
     {
@@ -66,12 +55,25 @@ const Events: React.FC = () => {
       type: 'support',
       description: 'Responding to a heartfelt request from school management in Sira, Karnataka, our dedicated Rainbow team member Srinivas Gupta Sir is actively working to arrange additional laptops for students. This initiative ensures enhanced access to digital learning resources, complementing the existing infrastructure to provide students with comprehensive educational support.',
       image: 'https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400',
-      attendees: 50,
+      attendees: "20+",
       price: 'Donation opportunity'
     }
   ];
 
   const pastEvents = [
+    {
+      id: 1,
+      title: 'Scribe Arrangement for Visually Impaired Students',
+      date: 'September 21, 2025',
+      time: '9:00 AM - 5:00 PM',
+      location: 'Tirupati, Andhra Pradesh',
+      type: 'support',
+      description: 'We have received a heartfelt request to arrange qualified scribes for two visually impaired students appearing for a competitive bank examination. Our dedicated team is actively reaching out to our trusted network of contacts in Tirupati to ensure these deserving students receive the support they need to excel in their academic pursuits.',
+      image: 'https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400',
+      attendees: 2,
+      price: 'Volunteer opportunity',
+      outcome: 'Arranged qualified scribes for two visually impaired students'
+    },
     {
       id: 1,
       title: 'Children\'s Day Celebration 2021',
