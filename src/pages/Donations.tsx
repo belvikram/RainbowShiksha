@@ -455,7 +455,37 @@ export default function DonationsWithQR() {
                         ₹{child.monthlySupport.toLocaleString()}
                       </span>
                     </div>
-                    <button className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 transform hover:scale-105">
+                    <button 
+                      onClick={() => {
+                        const whatsappNumber = "919700400237";
+                        const message = encodeURIComponent(
+                          `🌟 *Child Sponsorship Inquiry* 🌟\n\n` +
+                          `Hello Rainbow Shiksha Team,\n\n` +
+                          `I am interested in sponsoring a child through your organization. Here are the details:\n\n` +
+                          `👤 *Child Details:*\n` +
+                          `• Name: ${child.name}\n` +
+                          `• Age: ${child.age} years\n` +
+                          `• Grade: ${child.grade}\n` +
+                          `• School: ${child.school}\n` +
+                          `• Monthly Support: ₹${child.monthlySupport.toLocaleString()}\n\n` +
+                          `📝 *Child's Story:*\n${child.story}\n\n` +
+                          `I would like to:\n` +
+                          `• Start monthly sponsorship for ${child.name}\n` +
+                          `• Learn more about the sponsorship process\n` +
+                          `• Understand how I can track the child's progress\n` +
+                          `• Know about tax benefits (80G certificate)\n\n` +
+                          `Please provide me with:\n` +
+                          `• Payment options and process\n` +
+                          `• Regular updates about the child\n` +
+                          `• Contact details for any queries\n\n` +
+                          `Thank you for the amazing work you're doing! 🙏\n\n` +
+                          `Best regards,\n` +
+                          `[Your Name]`
+                        );
+                        window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+                      }}
+                      className="w-full bg-gradient-to-r from-blue-600 to-green-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+                    >
                       Sponsor {child.name}
                     </button>
                   </div>

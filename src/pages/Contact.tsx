@@ -1,4 +1,4 @@
-import { Clock, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { Clock, Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Phone, Send, Twitter } from "lucide-react";
 import React, { useState } from "react";
 
 const Contact: React.FC = () => {
@@ -48,7 +48,6 @@ const Contact: React.FC = () => {
       icon: Phone,
       title: "Call Us",
       details: "+91 9959277190",
-      subDetails: "Mon-Fri, 9:00 AM - 6:00 PM",
       color: "from-green-500 to-green-600",
     },
     {
@@ -70,9 +69,8 @@ const Contact: React.FC = () => {
   ];
 
   const officeHours = [
-    { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "10:00 AM - 4:00 PM" },
-    { day: "Sunday", hours: "Closed" },
+    { day: "Monday - Friday", hours: "10:00 AM - 6:00 PM" },
+    { day: "Saturday - Sunday", hours: "9:00 AM - 6:00 PM" },
   ];
 
   return (
@@ -303,32 +301,32 @@ const Contact: React.FC = () => {
                 </p>
                 <div className="flex space-x-4">
                   <a
-                  target="_blank"
-                    href="https://www.facebook.com/rainbowshiksha"
-                    className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                    target="_blank"
+                    href="https://www.facebook.com/RainbowShiksha"
+                    className="text-blue-600 hover:text-blue-700 transition-colors hover:scale-110 transform duration-200"
                   >
-                    f
+                    <Facebook className="h-6 w-6" />
                   </a>
                   <a
-                  target="_blank"
-                    href="https://www.twitter.com/rainbowshiksha"
-                    className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors"
+                    target="_blank"
+                    href="https://x.com/RainbowShiksha"
+                    className="text-blue-500 hover:text-blue-600 transition-colors hover:scale-110 transform duration-200"
                   >
-                    t
+                    <Twitter className="h-6 w-6" />
                   </a>
                   <a
-                  target="_blank"
+                    target="_blank"
                     href="https://www.instagram.com/rainbowshiksha"
-                    className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors"
+                    className="text-pink-600 hover:text-pink-700 transition-colors hover:scale-110 transform duration-200"
                   >
-                    i
+                    <Instagram className="h-6 w-6" />
                   </a>
                   <a
-                  target="_blank"
+                    target="_blank"
                     href="https://www.linkedin.com/company/rainbowshiksha"
-                    className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white hover:bg-blue-900 transition-colors"
+                    className="text-blue-700 hover:text-blue-800 transition-colors hover:scale-110 transform duration-200"
                   >
-                    in
+                    <Linkedin className="h-6 w-6" />
                   </a>
                 </div>
               </div>
