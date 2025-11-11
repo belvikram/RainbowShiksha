@@ -9,3 +9,7 @@ https://belvikram.github.io/RainbowShiksha/#/story
 
 Check the builds here after github login
 https://github.com/belvikram/RainbowShiksha/actions
+
+Build and deploy use below commmand
+
+build:deploy
