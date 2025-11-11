@@ -9,9 +9,10 @@ import {
   Users,
 } from "lucide-react";
 import React, { useState } from "react";
-import KiranPhoto from "/src/assets/impact/Kiran.jpeg";
+import RagavendraPhoto from "/src/assets/impact/Ragavendra.png";
 import RamuluPhoto from "/src/assets/impact/Ramulu.jpeg";
 import IndraReddyPhoto from "/src/assets/impact/Indra Reddy.jpeg";
+import ourJouneryImage11 from "/src/assets/our-journey/image11.jpg";
 
 const Impact: React.FC = () => {
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
@@ -51,25 +52,19 @@ const Impact: React.FC = () => {
 
   const successStories = [
     {
-      name: "V. Raghavendra",
-      age: 28,
-      location: "Rural Kurnool District, Andhra Pradesh",
-      before:
-        "Although he secured a rank of 239 in the RUPGCET exams and earned a diploma seat at Rayalaseema University, he faced difficulties in obtaining the financial support needed to enroll in college.",
-      after:
-        "After completing his postgraduate studies, he secured a government job at Kurnool Medical College.",
-      image:
-        "https://images.pexels.com/photos/8923139/pexels-photo-8923139.jpeg?auto=compress&cs=tinysrgb&w=400",
-      achievement: "Scored 92% in postgraduate exams",
-      quote:
-        "Rainbow Shiksha gave me the books and support I needed to succeed. Now I want to help other children like me.",
+      name: "Sri Madhava Vidya Mandira School",
+      location: "Sira, Karnataka",
+      before: "The school lacked adequate technology resources to provide digital learning opportunities for students, limiting their exposure to modern educational tools and computer literacy.",
+      after: "Rainbow Shiksha donated 3 computers and 2 laptops to the school for the 2024–25 academic year, enabling students to access digital learning resources and enhancing their computer literacy skills.",
+      image: ourJouneryImage11,
+      achievement: "Enhanced digital learning infrastructure for students",
+      quote: "The donation of computers and laptops has been immensely helpful for the learning of our children. It is a matter of pride that Rainbow Shiksha Association is providing such valuable social service to support education."
     },
-  
     {
       name: "Ramulu",
       location: "Rural Kurnool District, Andhra Pradesh",
       before: "Struggled to pay his college fees and even risked losing his certificates due to financial hardship.",
-      after: "With Rainbow Shiksha’s support from Inter 2nd year through his Degree Final year, Ramulu completed his postgraduate studies and secured a government job at Kurnool Medical College.",
+      after: "With Rainbow Shiksha's support from Inter 2nd year through his Degree Final year, Ramulu completed his postgraduate studies and secured a government job at Kurnool Medical College.",
       image: RamuluPhoto,
       achievement: "Completed his Degree Final year",
       quote: "Without this support, I would have never completed my education. Now I stand proud as a government employee, ready to help others like me."
@@ -77,20 +72,24 @@ const Impact: React.FC = () => {
     {
       name: "Indra Reddy",
       location: "Rural Kurnool District, Andhra Pradesh",
-      before: "Faced the possibility of discontinuing her studies because her family couldn’t afford tuition fees.",
+      before: "Faced the possibility of discontinuing her studies because her family couldn't afford tuition fees.",
       after: "Rainbow Shiksha sponsored her education from Inter 1st year to her Degree Final year, enabling her to graduate with distinction and begin a professional career.",
       image: IndraReddyPhoto,
       achievement: "Graduated with top honors in her degree program",
       quote: "Education changed everything for me. I hope to give back so no student has to drop out for lack of money."
     },
     {
-      name: "Kiran",
+      name: "V. Raghavendra",
+      age: 28,
       location: "Rural Kurnool District, Andhra Pradesh",
-      before: "Financial struggles forced him to consider dropping out after 8th Class.",
-      after: "Rainbow Shiksha paid his school fees at GSNR Kurnool, allowing him to continue studying and chase his dreams.",
-      image: KiranPhoto,
-      achievement: "Promoted successfully with strong academic progress",
-      quote: "I thought my schooling would end, but Rainbow Shiksha gave me a second chance. Now I study with confidence."
+      before:
+        "Although he secured a rank of 239 in the RUPGCET exams and earned a diploma seat at Rayalaseema University, he faced difficulties in obtaining the financial support needed to enroll in college.",
+      after:
+        "After completing his postgraduate studies, he secured a government job at Kurnool Medical College.",
+      image: RagavendraPhoto,
+      achievement: "Scored 92% in postgraduate exams",
+      quote:
+        "Rainbow Shiksha gave me the books and support I needed to succeed. Now I want to help other children like me.",
     }
     
   ];
@@ -125,20 +124,12 @@ const Impact: React.FC = () => {
 
   const testimonials = [
     {
-      type: "Parent",
-      name: "Sunita Devi",
-      relation: "Mother of Priya",
+      type: "Partner School",
+      name: "Sangama",
+      relation: "Headmaster, Sri Madhava Vidya Mandira",
       quote:
-        "My daughter was struggling in school, but with Rainbow Shiksha's support, she has become the top student in her class. I never imagined she could dream of becoming a doctor.",
-      location: "Maharashtra",
-    },
-    {
-      type: "Teacher",
-      name: "Mr. Ramesh Gupta",
-      relation: "Principal, Government School",
-      quote:
-        "The transformation in our students has been remarkable. The resources and training provided have elevated the entire quality of education at our school.",
-      location: "Punjab",
+        "Your Organization donated 3 Computers and 2 Laptops to our school SRI MADHAVA VIDYA MANDIRA for the 2024–25 academic year. It is helpful for the learning of the children. It is a matter of pride that RAINBOW SHIKSHA ASSOCIATION is providing such social service. The Management Board, Staff and children of SRI MADHAVA VIDYA MANDIRA pray that God's grace will always be upon you for your selfless service.",
+      location: "Sira, Karnataka",
     },
     {
       type: "Community Leader",
@@ -276,7 +267,7 @@ const Impact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="relative">
+              <div className="relative h-[500px]">
                 <img
                   src={successStories[currentStoryIndex].image}
                   alt={successStories[currentStoryIndex].name}

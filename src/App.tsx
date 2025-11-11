@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Donations from "./pages/Donations";
 import Events from "./pages/Events";
+import ExtendedSupport from "./pages/ExtendedSupport";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
 import GetInvolved from "./pages/GetInvolved";
@@ -31,6 +32,7 @@ function App() {
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/extended-support" element={<ExtendedSupport />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-conditions" element={<TermsAndConditions />} />
           </Routes>

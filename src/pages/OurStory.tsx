@@ -294,7 +294,7 @@ const OurStory: React.FC = () => {
                     isEven ? "" : "lg:flex-row-reverse"
                   }`}
                 >
-                  <div className="lg:w-1/2">
+                  <div className="lg:w-1/2 order-2 lg:order-none">
                     <button
                       type="button"
                       onClick={() => openLightbox(index)}
@@ -309,7 +309,7 @@ const OurStory: React.FC = () => {
                     </button>
                   </div>
 
-                  <div className="lg:w-1/2">
+                  <div className="lg:w-1/2 order-1 lg:order-none">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                         <Icon className="h-6 w-6 text-blue-600" />
@@ -363,7 +363,7 @@ const OurStory: React.FC = () => {
           </h2>
           <p className="text-xl mb-8 opacity-90 leading-relaxed">
             Our journey is far from over. With your support, we aim to reach
-            10,000 children by 2030 and establish Rainbow Shiksha as a model for
+            500 children by 2030 and establish Rainbow Shiksha as a model for
             educational transformation across India.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
@@ -372,11 +372,11 @@ const OurStory: React.FC = () => {
               <div className="text-sm opacity-80">Children by 2030</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-3xl font-bold mb-2">15 States</div>
+              <div className="text-3xl font-bold mb-2">5 States</div>
               <div className="text-sm opacity-80">Nationwide Presence</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-3xl font-bold mb-2">50+</div>
+              <div className="text-3xl font-bold mb-2">25+</div>
               <div className="text-sm opacity-80">Partner Schools</div>
             </div>
           </div>

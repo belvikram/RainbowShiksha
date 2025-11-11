@@ -148,9 +148,11 @@ const About: React.FC = () => {
   ];
 
   const partners = [
-    { name: "Sri Madhava Vidhya Mandira School", logo: "🏫" },
-    { name: "KBR Foundation", logo: "🤝" },
+    { name: "Sri Madhava Vidhya Mandira School, Sira, Karnataka", logo: "🏫" },
+    { name: "KBR Foundation, Reg Number: 69/2018, Guntur", logo: "🤝" },
     { name: "AP & TS Govt Schools", logo: "🏛️" },
+    { name: "Vignana Peetham, An Educational Inspired by Dharma & Seva, Kurnool", logo: "📚" },
+    { name: "Rainbow Children's Home, Kakinada, Reg No: 217/2018", logo: "🏠" },
   ];
 
   return (
@@ -301,14 +303,14 @@ const About: React.FC = () => {
               Working together to create lasting impact
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-nowrap lg:justify-center gap-6">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
+                className="group bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer lg:flex-1 lg:max-w-xs flex flex-col"
               >
                 <div className="text-3xl mb-3">{partner.logo}</div>
-                <p className="text-sm font-medium text-gray-700">
+                <p className="text-sm font-medium text-gray-700 flex-grow">
                   {partner.name}
                 </p>
               </div>
