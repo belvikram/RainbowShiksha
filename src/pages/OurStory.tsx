@@ -243,9 +243,9 @@ const OurStory: React.FC = () => {
                 className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div
-                  className={`w-16 h-16 bg-gradient-to-br ${challenge.color} rounded-full flex items-center justify-center mb-4`}
+                  className={`inline-block bg-gradient-to-br ${challenge.color} rounded-lg px-4 py-2 mb-4`}
                 >
-                  <span className="text-white font-bold text-lg">
+                  <span className="text-white font-bold text-base whitespace-nowrap">
                     {challenge.stat}
                   </span>
                 </div>

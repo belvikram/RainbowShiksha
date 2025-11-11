@@ -3,6 +3,7 @@ import { Calculator, Check, Heart, Shield, Star, X } from "lucide-react";
 import React, { useEffect, useMemo, useState } from "react";
 
 import QRCode from "qrcode";
+import RamuluImage from "../assets/Donations/Ramulu.png";
 
 const presetAmounts = [
   { amount: 500, impact: "1 child’s school supplies for a month" },
@@ -41,38 +42,25 @@ const testimonials = [
 ];
 
 const sponsorshipOptions = [
+ 
   {
-    name: "Ravi Kumar",
-    age: 10,
-    grade: "5th Grade",
-    school: "Government Primary School, Pune",
+    name: "P. Laxmi Durga",
+    age: 20,
+    grade: "BTech",
+    school: "Machilipatnam, Andhra Pradesh",
     story:
-      "Dreams of becoming a doctor. Loves science and helps younger students with their studies.",
+      "Pursuing BTech with determination and dreams of making a difference in the tech world. Committed to using education to create opportunities for others.",
     image:
       "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=300",
-    monthlySupport: 2000,
   },
   {
-    name: "Priya Sharma",
-    age: 12,
-    grade: "7th Grade",
-    school: "Rural School, Maharashtra",
+    name: "P. Ramulu",
+    age: 22,
+    grade: "B.Ed",
+    school: "Yemmiganuru, Kurnool",
     story:
-      "Passionate about mathematics and wants to become an engineer. Top of her class despite challenges.",
-    image:
-      "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=300",
-    monthlySupport: 2500,
-  },
-  {
-    name: "Arjun Patel",
-    age: 14,
-    grade: "9th Grade",
-    school: "High School, Gujarat",
-    story:
-      "Interested in computers and technology. Helps maintain the school's computer lab.",
-    image:
-      "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=300",
-    monthlySupport: 3000,
+      "Studying B.Ed to become an educator and inspire the next generation. Passionate about teaching and making quality education accessible to all children.",
+    image: RamuluImage,
   },
 ];
 
@@ -427,13 +415,15 @@ export default function DonationsWithQR() {
             {sponsorshipOptions.map((child, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
               >
-                <img
-                  src={child.image}
-                  alt={child.name}
-                  className="w-full h-48 object-cover"
-                />
+                <div className="w-full h-72 bg-gray-100 flex items-center justify-center">
+                  <img
+                    src={child.image}
+                    alt={child.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-1">
                     {child.name}
@@ -447,14 +437,6 @@ export default function DonationsWithQR() {
                   <p className="text-gray-700 text-sm mb-4">{child.story}</p>
 
                   <div className="border-t pt-4">
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-sm text-gray-600">
-                        Monthly Support:
-                      </span>
-                      <span className="text-lg font-semibold text-blue-600">
-                        ₹{child.monthlySupport.toLocaleString()}
-                      </span>
-                    </div>
                     <button 
                       onClick={() => {
                         const whatsappNumber = "919700400237";
@@ -466,8 +448,7 @@ export default function DonationsWithQR() {
                           `• Name: ${child.name}\n` +
                           `• Age: ${child.age} years\n` +
                           `• Grade: ${child.grade}\n` +
-                          `• School: ${child.school}\n` +
-                          `• Monthly Support: ₹${child.monthlySupport.toLocaleString()}\n\n` +
+                          `• School: ${child.school}\n\n` +
                           `📝 *Child's Story:*\n${child.story}\n\n` +
                           `I would like to:\n` +
                           `• Start monthly sponsorship for ${child.name}\n` +
