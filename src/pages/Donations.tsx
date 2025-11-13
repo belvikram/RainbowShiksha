@@ -103,16 +103,19 @@ export default function DonationsWithQR() {
   const genericUPILink = useMemo(() => `upi://pay?${upiParams}`, [upiParams]);
 
   const buildDeepLink = (target: "gpay" | "phonepe") => {
-    // Android preferred: intent with explicit package → app chooser avoided
+    // Android: use intent URL format for better app launching
     if (isAndroid) {
       if (target === "gpay") {
-        return `intent://upi/pay?${upiParams}#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end`;
+        // Intent URL format: intent://pay?params#Intent;scheme=upi;package=package_name;end
+        return `intent://pay?${upiParams}#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end`;
       }
 
-      return `intent://upi/pay?${upiParams}#Intent;scheme=upi;package=com.phonepe.app;end`;
+      if (target === "phonepe") {
+        return `intent://pay?${upiParams}#Intent;scheme=upi;package=com.phonepe.app;end`;
+      }
     }
 
-    // iOS: use app schemes when available; otherwise OS will fall back to generic UPI handler
+    // iOS: use app schemes when available
     if (isIOS) {
       if (target === "gpay") return `gpay://upi/pay?${upiParams}`;
       return `phonepe://pay?${upiParams}`;
@@ -172,16 +175,27 @@ export default function DonationsWithQR() {
     const primary = buildDeepLink(target);
     const fallback = genericUPILink;
 
-    // Navigate to deep link
-    window.location.href = primary;
-
-    // Fallback to generic UPI after a short delay if the app isn't installed
-    if (isAndroid || isIOS) {
+    if (isAndroid) {
+      // For Android, create an anchor element and click it for better compatibility
+      // This method works more reliably than window.location.href for deep links
+      const link = document.createElement("a");
+      link.href = primary;
+      link.style.display = "none";
+      document.body.appendChild(link);
+      
+      // Trigger click to open the app
+      link.click();
+      
+      // Clean up
       setTimeout(() => {
-        try {
-          window.location.href = fallback;
-        } catch {}
-      }, 1200);
+        document.body.removeChild(link);
+      }, 100);
+    } else if (isIOS) {
+      // For iOS, use direct app schemes
+      window.location.href = primary;
+    } else {
+      // Desktop fallback
+      window.location.href = fallback;
     }
   };
 

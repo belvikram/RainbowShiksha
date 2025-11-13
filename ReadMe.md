@@ -12,4 +12,4 @@ https://github.com/belvikram/RainbowShiksha/actions
 
 Build and deploy use below commmand
 
-build:deploy
+sudo npm run build:deploy
