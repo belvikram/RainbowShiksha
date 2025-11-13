@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes flash-left-to-right {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  50% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+}
