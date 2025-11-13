@@ -1,4 +1,4 @@
-import { Calculator, Check, Heart, Shield, Star, X } from "lucide-react";
+import { Building2, Calculator, Check, Copy, Heart, Shield, Star, X } from "lucide-react";
 // DonationsWithQR.tsx
 import React, { useEffect, useMemo, useState } from "react";
 
@@ -463,6 +463,128 @@ export default function DonationsWithQR() {
             </div>
           </div>
         )}
+      </section>
+
+      {/* Bank Account Details */}
+      <section className="bg-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Bank Transfer Details
+            </h2>
+            <p className="text-xl text-gray-600">
+              You can also donate via direct bank transfer
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 via-green-50 to-yellow-50 rounded-2xl shadow-xl p-8 border border-gray-200">
+            <div className="flex items-center justify-center mb-6">
+              <Building2 className="h-12 w-12 text-blue-600" />
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                      Account Holder Name
+                    </label>
+                    <div className="mt-2 flex items-center justify-between">
+                      <p className="text-lg font-bold text-gray-900">
+                        Rainbow Shiksha Education Development Trust
+                      </p>
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText("Rainbow Shiksha Education Development Trust");
+                          alert("Account name copied to clipboard!");
+                        }}
+                        className="ml-2 p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                        title="Copy to clipboard"
+                      >
+                        <Copy className="h-4 w-4 text-gray-600" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                      Account Number
+                    </label>
+                    <div className="mt-2 flex items-center justify-between">
+                      <p className="text-lg font-bold text-gray-900 font-mono">
+                        314402000000537
+                      </p>
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText("314402000000537");
+                          alert("Account number copied to clipboard!");
+                        }}
+                        className="ml-2 p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                        title="Copy to clipboard"
+                      >
+                        <Copy className="h-4 w-4 text-gray-600" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                      IFSC Code
+                    </label>
+                    <div className="mt-2 flex items-center justify-between">
+                      <p className="text-lg font-bold text-gray-900 font-mono">
+                        IOBA0003144
+                      </p>
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText("IOBA0003144");
+                          alert("IFSC code copied to clipboard!");
+                        }}
+                        className="ml-2 p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                        title="Copy to clipboard"
+                      >
+                        <Copy className="h-4 w-4 text-gray-600" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                      Bank Name
+                    </label>
+                    <p className="mt-2 text-lg font-semibold text-gray-900">
+                      Indian Overseas Bank
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                      Branch
+                    </label>
+                    <p className="mt-2 text-lg font-semibold text-gray-900">
+                      Peddapadu [3144]
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                      Account Type
+                    </label>
+                    <p className="mt-2 text-lg font-semibold text-gray-900">
+                      Current Account
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                <p className="text-sm text-blue-800">
+                  <strong>Note:</strong> After making a bank transfer, please share the transaction details via WhatsApp or email for our records and to receive your donation receipt.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Child Sponsorship */}
