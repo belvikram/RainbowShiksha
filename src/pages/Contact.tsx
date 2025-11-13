@@ -22,11 +22,47 @@ const Contact: React.FC = () => {
     }));
   };
 
+  const buildWhatsAppMessage = () => {
+    const queryTypeLabel = queryTypes.find(
+      (type) => type.value === formData.queryType
+    )?.label || formData.queryType;
+
+    const message = `*New Contact Form Submission*
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Query Type:* ${queryTypeLabel}
+*Subject:* ${formData.subject}
+
+*Message:*
+${formData.message}
+
+---
+Submitted via Rainbow Shiksha Website`;
+
+    return message;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
-    alert("Thank you for your message! We'll get back to you within 24 hours.");
+    
+    // Build the WhatsApp message template
+    const whatsappMessage = buildWhatsAppMessage();
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // WhatsApp phone number (from contact info: +91 9959277190)
+    const phoneNumber = "919959277190"; // WhatsApp format: country code + number without + or spaces
+    
+    // Open WhatsApp with the pre-filled message
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
+    
+    // Show success message
+    alert("Opening WhatsApp to send your message. Please review and send!");
+    
+    // Reset form
     setFormData({
       name: "",
       email: "",
