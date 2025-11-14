@@ -3,6 +3,7 @@ import { Building2, Calculator, Check, Copy, Heart, Shield, Star, X } from "luci
 import React, { useEffect, useMemo, useState } from "react";
 
 import QRCode from "qrcode";
+import LaxmiDurgaImage from "../assets/Donations/Laxmi Durga.jpeg";
 import RamuluImage from "../assets/Donations/Ramulu.png";
 
 const presetAmounts = [
@@ -50,8 +51,7 @@ const sponsorshipOptions = [
     school: "Machilipatnam, Andhra Pradesh",
     story:
       "Pursuing BTech with determination and dreams of making a difference in the tech world. Committed to using education to create opportunities for others.",
-    image:
-      "https://images.pexels.com/photos/8923194/pexels-photo-8923194.jpeg?auto=compress&cs=tinysrgb&w=300",
+    image: LaxmiDurgaImage,
   },
   {
     name: "P. Ramulu",
