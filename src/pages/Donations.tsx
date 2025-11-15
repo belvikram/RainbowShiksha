@@ -17,11 +17,11 @@ const presetAmounts = [
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    location: "Mumbai",
-    donation: "Monthly donor since 2022",
+    name: "Gowthami K",
+    location: "Hyderabad",
+    donation: "Member since 10 years",
     quote:
-      "Seeing the impact reports and photos of the children I'm helping has been incredibly rewarding. Rainbow Shiksha makes it easy to make a real difference.",
+      "I have been part of rainbow family since last 10 years. They are providing education support to needy students is really a good work. Balancing professional , family , society work is not a simple job. Big shout out to the team for their hard work and dedication towards society.  Thanks to Rainbow Shiksha for making  me part of this support cycle.",
     rating: 5,
   },
   {
