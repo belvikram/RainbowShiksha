@@ -65,7 +65,7 @@ const sponsorshipOptions = [
 ];
 
 const ORG_NAME = "Rainbow Shiksha";
-const UPI_VPA = "rainbowshiksha@ybl"; // <— your UPI ID
+const UPI_VPA = "RAINBOWSHIKSHAEDUCATIONDEVELOPMENTTRUST@iob"; // <— your UPI ID
 
 export default function DonationsWithQR() {
   const [selectedAmount, setSelectedAmount] = useState<number>(
