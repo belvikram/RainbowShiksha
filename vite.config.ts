@@ -8,4 +8,8 @@ export default defineConfig({
     exclude: ["lucide-react"],
   },
   base: "/RainbowShiksha/",
+  server: {
+    port: 3000,
+    host: true,
+  },
 });
